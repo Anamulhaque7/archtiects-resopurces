@@ -58,7 +58,6 @@ main {
 
 main>section {
     margin-top: 130px;
-
 }
 
 
@@ -66,6 +65,7 @@ main>section {
     font-size: 2.8rem;
     font-weight: 700;
 }
+
 /* header styles */
 
 
@@ -140,12 +140,15 @@ main>section {
     font-weight: 900;
     font-style: italic;
 }
+
 /* some fact related style start heres */
-.facts-container{
+.facts-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
-.fact-card{
+
+.fact-card {
     border: 1px solid orange;
     height: 140px;
     width: 140px;
@@ -154,21 +157,42 @@ main>section {
     display: flex;
     align-items: center;
     text-align: center;
+    margin: 20px auto;
 }
-.fact-number{
+
+.fact-number {
     font-size: 2.8rem;
     font-weight: 600;
     margin-top: 5px;
     margin-bottom: 10px;
 }
-.fact-name{
+
+.fact-name {
     font-size: 1rem;
     font-weight: 600;
     margin-top: 10px;
 }
-.fact-decription{
+
+.fact-decription {
     max-width: 540px;
 }
+
+/* sponsors relsted styles */
+.sponsor-info {
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.sponsor-companies {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.sponsor-companies img {
+    filter: grayscale(100%);
+}
+
 /* responsive media quary */
 @media screen and (max-width:576px) {
 
@@ -179,8 +203,21 @@ main>section {
         font-weight: 400;
     }
 
-    .team-img-container {
+    .team-img-container,
+    .facts-container,
+    .sponsor-companies {
+
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .facts-container {
+        justify-items: center;
+        gap: 20px;
+    }
+
+    .sponsor-companies {
+        justify-items: center;
+        gap: 40px;
     }
 
     .our-features {
@@ -197,5 +234,18 @@ main>section {
 
     .our-features {
         margin: 50px auto;
+    }
+
+
+    .facts-container {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .sponsor-companies {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 50px;
     }
 }
