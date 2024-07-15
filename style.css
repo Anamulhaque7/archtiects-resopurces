@@ -242,7 +242,16 @@ main>section {
 .sponsor-companies img {
     filter: grayscale(100%);
 }
+/* footer-container start heres */
+.footer-container{
+    background-color: #FFF4E7;
+    height: 50px;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
 /* responsive media quary */
 @media screen and (max-width:576px) {
 
@@ -292,12 +301,10 @@ main>section {
         margin: 50px auto;
     }
 
-
     .facts-container {
 
         grid-template-columns: repeat(2, 1fr);
     }
-
 
     .sponsor-companies {
         grid-template-columns: repeat(2, 1fr);
